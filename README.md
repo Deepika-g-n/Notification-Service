@@ -32,13 +32,13 @@ This is a microservice for sending email notifications. It listens to a RabbitMQ
 ### 1. Clone the repo
 
 ``
-git clone https://github.com/yourusername/notification-service.git
+git clone https://github.com/Deepika-g-n/notification-service.git
 cd notification-service
 
-2.Install dependencies
+**2.Install dependencies**
 npm install
 
-3. Environment Variables
+**3. Environment Variables**
 Create a .env file:
 
 # RabbitMQ
@@ -56,10 +56,10 @@ SMTP_PASS=your_pass
 MONGODB_URI=mongodb://localhost:27017/notificationdb
 
 
-2. Running the Service
+**4. Running the Service**
 npm start
 
-3.Testing the Service
+**5.Testing the Service**
 You can simulate message sending using a script or Postman to send data to the RabbitMQ queue:
 
 {
@@ -67,18 +67,18 @@ You can simulate message sending using a script or Postman to send data to the R
   "orderId": "12345"
 }
 
-4.Email Output
+**6.Email Output**
 Use Mailtrap or Mailhog for local email testing.
 
 Update .env with the correct credentials.
 
-5.Docker Support
+**7.Docker Support**
 If using Docker:
 
 docker build -t notification-service .
 docker run -p 3000:3000 --env-file .env notification-service
 
-6.Contributing
+**8.Contributing**
 Fork this repo
 
 Create your branch: git checkout -b feature-name
@@ -89,7 +89,7 @@ Push to the branch: git push origin feature-name
 
 Create a pull request
 
-License
+**License**
 This project is licensed under the MIT License.
 
 
