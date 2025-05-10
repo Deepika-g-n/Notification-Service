@@ -1,4 +1,4 @@
-// consumer.js
+
 const amqp = require('amqplib');
 const processNotification = require('./services/notificationService');
 
@@ -18,11 +18,11 @@ async function startConsumer() {
         console.log('📨 Message received:', data);
 
         try {
-          await processNotification(data); // Your main logic
-          channel.ack(msg); // Acknowledge message on success
+          await processNotification(data); 
+          channel.ack(msg); 
         } catch (err) {
           console.error('❌ Error processing message:', err);
-          // optionally: channel.nack(msg); for requeue
+          
         }
       }
     });

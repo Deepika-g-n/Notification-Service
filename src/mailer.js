@@ -13,9 +13,9 @@ const sendEmail = async (data) => {
   const mailOptions = {
     from: process.env.EMAIL_FROM,
     to: data.email,
-    subject: 'Order Confirmation',
-    text: `Hi, your order ${data.orderId} has been placed successfully.`
-  };
+    subject: data.type,
+    text: data.message
+    };
 
   try {
     const info = await transporter.sendMail(mailOptions);
